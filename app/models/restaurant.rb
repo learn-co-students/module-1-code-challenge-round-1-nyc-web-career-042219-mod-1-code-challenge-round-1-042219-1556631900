@@ -35,6 +35,6 @@ class Restaurant
   end
 
   def self.find_by_name(name)
-    Restaurant.all.find {|restaurant| restaurant.name}
+    Restaurant.all.find {|restaurant| restaurant.name == name}
   end
 end
