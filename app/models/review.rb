@@ -10,7 +10,13 @@ class Review
     @customer = customer
     @restaurant = restaurant
     @content = content
-    @rating = rating
+    if rating.to_i > 5
+      @rating = 5
+    elsif rating.to_i < 1
+      @rating = 1
+    else
+      @rating = rating.to_i
+    end
 
     @@all << self
   end

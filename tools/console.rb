@@ -15,7 +15,7 @@ c = Restaurant.new("Chuck-E-Cheese\'s")
 d = Restaurant.new("Denny\'s")
 h = Restaurant.new("Hibachi King")
 
-a.add_review(c, "Delicious.", 5)
+a.add_review(c, "Delicious.", 10)
 b.add_review(c, "Great pizza.", 4)
 
 f = b.add_review(d, "Bad eggs.", 1)
