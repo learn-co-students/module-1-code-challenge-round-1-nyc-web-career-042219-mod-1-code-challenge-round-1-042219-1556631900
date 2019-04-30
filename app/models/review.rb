@@ -1,6 +1,6 @@
 class Review
 
-attr_reader :customer, :restaurant, :content, :rating, :patron, :score, :words
+attr_reader :customer, :restaurant, :content, :rating
 
   @@all = []
 
@@ -16,22 +16,19 @@ def initialize(customer, restaurant, content, rating)
   @content = content
   @rating = rating
   @@all << self
-  @patron = customer
-  @score = rating
-  @words = content
 end
 
 def customer
-  self.patron
+  @customer
 end
 
 
 def rating
-  self.score
+  @rating
 end
 
 def content
-  self.words
+  @content
 end
 
 
