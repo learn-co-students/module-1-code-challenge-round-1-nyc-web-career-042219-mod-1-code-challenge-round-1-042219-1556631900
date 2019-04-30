@@ -31,7 +31,7 @@ class Customer
   end
 
   def self.find_by_name(full_name)
-    Customer.all.find { |customer| "#{customer.first_name} #{customer.last_name}" == full_name}
+    Customer.all.find { |customer| customer.full_name == full_name}
   end
 
   def self.find_all_by_first_name(name)
@@ -39,11 +39,7 @@ class Customer
   end
 
   def self.all_names
-    full_names = []
-    Customer.all.each do |customer|
-      full_names << "#{customer.first_name} #{customer.last_name}"
-    end
-    full_names
+    Customer.all.map { |customer| customer.full_name}
   end
 
 end
