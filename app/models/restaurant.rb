@@ -21,15 +21,23 @@ class Restaurant
     self.reviews.map { |review| review.customer }.uniq
   end
 
+  def ratings
+    # arr of all ratings
+    ratings = self.reviews.map { |review| review.rating }
+  end
+
   def average_star_rating
     # avrg is total/amt
-    ratings = self.reviews.map { |review| review.rating } #arr of ratings
-    ratings.sum.to_f / ratings.size
+    self.ratings.sum.to_f / self.ratings.size
+  end
+
+  def contents
+    # arr of review contents
+    self.reviews.map { |review| review.content }
   end
 
   def longest_review
-    contents = self.reviews.map { |review| review.content } #arr of review contents
-    contents.max_by { |content| content.length }
+    self.contents.max_by { |content| content.length }
   end
 
   def self.find_by_name(name)
