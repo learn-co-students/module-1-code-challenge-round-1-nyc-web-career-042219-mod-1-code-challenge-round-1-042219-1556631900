@@ -3,11 +3,18 @@ class Review
 
   @@all = []
 
-  def initialize(restaurant, customer, content, rating)
+  def initialize(restaurant, customer, content, rating) #rating = 1-5
     @restaurant = restaurant
     @customer = customer
     @content = content
-    @rating = rating
+
+    if rating > 5
+      @rating = 5
+    elsif rating < 1
+      rating = 1
+    else
+      @rating = rating
+    end
 
     @@all << self
   end

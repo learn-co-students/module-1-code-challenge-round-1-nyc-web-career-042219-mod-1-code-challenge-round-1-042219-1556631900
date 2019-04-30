@@ -17,7 +17,7 @@ kfc = Restaurant.new("Kentucky Fried Chicken")
 popeyes = Restaurant.new("Popeyes")
 
 bob_saget.add_review(bdubs, "Worst place ever.", 3)
-jim_morrison.add_review(bdubs, "Garbage ass place, takes 1 hour to make 6 wings", 2)
+jim_morrison.add_review(bdubs, "terrible place, takes 1 hour to make 6 wings", 2)
 ben_simmons.add_review(kfc, "KFC bruh", 10)
 ben_simmons.add_review(popeyes, "not better than kfc tho", 7)
 jimmy_butler.add_review(popeyes, "popeyes bruh", 10)
