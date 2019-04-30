@@ -22,6 +22,7 @@ jake_one = Review.new(jake, krab, "lovely", 5)
 squidward_one = Review.new(squidward, krab, "awful", 1)
 jake_two = Review.new(jake, king, "decent shakes I guess", 2)
 jake_three = Review.new(jake, krab, "No pickles this time!", 4)
+squidward_two = Review.new(squidward, krab, "I hate it here", -1)
 
 
 binding.pry
