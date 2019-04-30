@@ -25,15 +25,13 @@ class Customer
   def reviews
     Review.all.select {|review| review.customer == self}
   end
-  
+
   def num_reviews
-    all_reviews = self.reviews
-    all_reviews.length
+    self.reviews.length
   end
 
   def restaurants
-    all_reviews = self.reviews
-    all_reviews.map {|review| review.restaurant}
+    self.reviews.map {|review| review.restaurant}
   end
 
   def self.find_by_name(name)
