@@ -13,6 +13,7 @@ e = Customer.new("Alice", "Ebbs")
 
 c = Restaurant.new("Chuck-E-Cheese\'s")
 d = Restaurant.new("Denny\'s")
+h = Restaurant.new("Hibachi King")
 
 a.add_review(c, "Delicious.", 5)
 b.add_review(c, "Great pizza.", 4)

@@ -15,5 +15,4 @@ class Review
     @@all << self
   end
 
-
 end
