@@ -58,7 +58,7 @@ class Restaurant
 
   # matches restaurant from 'all' array by name
   def self.find_by_name(name)
-    Restaurant.all.select do |restaurant|
+    Restaurant.all.find do |restaurant|
       restaurant.name.upcase == name.upcase
     end
   end
