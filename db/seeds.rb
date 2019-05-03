@@ -10,6 +10,8 @@ kfc = Restaurant.find_or_create_by(name: "kentucky friend chicken")
 kfc_review_adam = Review.find_or_create_by(customer: adam, restaurant: kfc, content: "good", rating: 3)
 kfc_review_zach = Review.find_or_create_by(customer: zach, restaurant: kfc, content: "bacon chick, yum", rating: 5)
 
+zach.add_review(kfc, "yum", 5)
+
 #
 # zach.add_review(restaurant: kfc, content: "yum", rating: 5)
 # adam.add_review(restaurant: mcd, content: "those fries yo", rating: 5)

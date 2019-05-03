@@ -46,10 +46,10 @@ class Customer < ActiveRecord::Base
 # end
 # ##instance methods
 #
-# def add_review(restaurant, content, rating)
-#   Review.new(self, restaurant, content, rating)
-# end
-#
+def add_review(restaurant, content, rating)
+  Review.find_or_create_by(customer: self, restaurant: restaurant, content: content, rating: rating)
+end
+
 # def my_reviews #helper method
 #   Review.all.select {|review| review.customer == self}
 # end
