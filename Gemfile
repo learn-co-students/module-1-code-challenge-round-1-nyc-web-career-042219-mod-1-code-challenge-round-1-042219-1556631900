@@ -1,5 +1,10 @@
-# A sample Gemfile
 source "https://rubygems.org"
 
-gem 'pry'
+gem 'activerecord'
+gem 'sinatra-activerecord'
+gem 'rake'
 gem 'require_all'
+gem 'sqlite3'
+gem 'pry'
+
+gem "faker", "~> 1.9"
