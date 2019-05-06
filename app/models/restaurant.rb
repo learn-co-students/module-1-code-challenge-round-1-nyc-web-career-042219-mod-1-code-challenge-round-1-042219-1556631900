@@ -20,11 +20,12 @@ class Restaurant
   end
 
   def average_star_rating
-    #taking the reviews for a certain restaurant and looking through the reviews to find the rating for each review. Then with that array of ratings, looking for the average
-      reviews.map do |review|
-        review.rating
-      end.average
-  end
+     review_amount = self.reviews.count
+     star = self.reviews.map do |review|
+       review.rating
+     end.sum
+     star/review_amount.to_f
+   end
 
   def longest_review
     reviews.sort_by do |review|
